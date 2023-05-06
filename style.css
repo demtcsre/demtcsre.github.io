@@ -16,6 +16,17 @@ header{
     background-color: lightseagreen;
 }
 
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style-type: none;
+    list-style: none;
+}
+
 section{
     width: 100%;
     height: calc(100vh - 50px);
