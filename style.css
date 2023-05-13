@@ -7,32 +7,40 @@ body{
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 header{
     height: 75px;
     width: 100%;
-    background-color: lightseagreen;
+    background-color: darkcyan;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
  
-header ul{
+header nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0px auto;
     padding: 0;
 }
 
-header ul li{
+header nav ul li{
     display: inline;
-    text-transform: uppercase;
     font-weight: bold;
     padding: 0 20px;
 }
 
-header ul li a{
-    color: black;
+header nav ul li a{
+    color: white;
     text-decoration: none;
 }
 
