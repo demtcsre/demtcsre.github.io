@@ -14,10 +14,12 @@ body{
 header{
     height: 62.5px;
     width: 100%;
-    background-color: darkcyan;
     display: flex;
+    position: fixed;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
+    box-shadow: 5px 5px 10px 0px lightslategray;
+    border-top: 1px solid black;
 }
  
 header nav{
@@ -39,14 +41,15 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: whitesmoke   ;
+    font-size: 1.2em;
+    color: lightseagreen;
     text-decoration: none;
 }
 
 header nav ul li a:hover{
-    color: lightgoldenrodyellow;
+    color: darkcyan;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 1.5em;
 }
 
 header nav div.menu-toggle{
@@ -57,7 +60,7 @@ header nav div.menu-toggle span.menu-toggle-item{
     width: 18px;
     height: 3px;
     box-sizing: border-box;
-    background-color: white;
+    background-color: darkc;
 }
 
 section{
