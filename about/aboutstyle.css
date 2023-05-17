@@ -55,7 +55,8 @@ header nav ul li a{
     text-decoration: none;
 }
 
-header nav ul li a #about{
+header nav ul li a#about{
+    color: #008a8a;
     font-size: 1.5em;
 }
 
