@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+body>div.kotak {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.whatsapp-icon{
+    width: 75px;
+    height: 75px;
+    font-size: 50px;
+    background-color: lightgreen;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+header>div.header-block {
+    width: 100%;
+    height: 4em;
+    background-color: rgb(155, 20, 20);
+}
+
+header>nav {
+    width: 80%;
+    height: 75px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+}
+
+header>nav>div.nav-logo{
+    margin: auto;
+}
+
+header>nav>ul {
+    list-style-type: none;
+    margin: 0px auto;
+    padding: 0;
+}
+
+header>nav>ul li {
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.nav-item{
+    border-right: 3px black solid;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+div.jumbotron{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content-1{
+    width: 80%;
+    height: 30em;
+    box-sizing: border-box;
+    margin: 5em auto auto auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section.content-1>div.left, section.content-1>div.right {
+    width: 45%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+section.content-1>div.left .item, section.content-1>div.right .item{
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+section.content-1>div.left .enrol-btn{
+    width: 60%;
+    height: 40px;
+    background-color: lightyellow;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content-2{
+    width: 75%;
+    height: 45em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.content-2>div.kotak{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+section.tour{
+    width: 75%;
+    height: 30em;
+    background: url("lab.jpg") center center / cover;
+    opacity: 0.85;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+section.tour>div.box-top{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.tour>div.box-top>div.foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.tour>div.box-top>h1{
+    display: flex;
+    justify-content: center;
+    font-size: 30pt;
+}
+
+section.tour>div.box-top>p{
+    display: flex;
+    justify-content: center;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+section.tour>div.box-bottom{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+section.tour>div.box-bottom>div.btn{
+    height: 2em;
+    font-size: 20pt;
+    font-weight: bold;
+    justify-content: center;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+}
+
+section.article{
+    width: 80%;
+    height: 40em;
+    box-sizing: border-box;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section.article>div.left, section.article>div.right{
+    width: 45%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+section.article>div.left>div.kotak{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+section.article>div.left>div.kotak>div.content{
+    width: 100%;
+    height: 100%;
+    background: url("valentine.jpg") center center / cover no-repeat;
+    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+section.article>div.right>div.title{
+    height: 7%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.article>div.right>div.title>h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15pt;
+    padding-left: 1em;
+}
+
+section.article>div.right>div.kotak{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+section.article>div.right>div.kotak>div.picture{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.article>div.right>div.kotak>div.picture>div.satu, section.article>div.right>div.kotak>div.picture>div.dua, section.article>div.right>div.kotak>div.picture>div.tiga{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto 0;
+}
+
+section.article>div.right>div.kotak>div.text{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.article>div.right>div.kotak>div.text>div.satu, section.article>div.right>div.kotak>div.text>div.dua, section.article>div.right>div.kotak>div.text>div.tiga{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1em 0;
+}
+
+section.service{
+    width: 100%;
+    height: 8em;
+    background-color: lightgoldenrodyellow;
+    box-sizing: border-box;
+    border: var(--cream) solid;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section.service>div.text{
+    width: 75%;
+    height: 100%;
+    font-size: 20pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1em;
+}
+
+section.service>div.comm{
+    width: 25%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.service>div.comm>p{
+    width: 50%;
+    height: 2em;
+    font-size: 15pt;
+    font-weight: bold;
+    display: flex;
+    box-sizing: border-box;
+    border: solid;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+}
+
+footer, footer>.kotak{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: rgb(155, 20, 20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>.kotak{
+    width: 80%;
+}
+
+footer section.top{
+    width: 100%;
+    height: 85%;
+    padding: 0 1.5em;
+    padding-bottom: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    border-bottom: lightgoldenrodyellow 0.1em solid;
+    justify-content: space-between;
+}
+
+footer section.top>div.item{
+    width: 23%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+div.social-media{
+    padding: 4em 0;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+div.social-media>div.logo{
+    width: 100%;
+    height: 75%;
+}
+
+div.social-media>div.logo>img{
+    width: 135px;
+    height: 150px;
+}
+
+div.social-media>h3{
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+}
+
+div.social-media>div.social-icons{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    color: white;
+}
+
+div.item-contact{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    color: white;
+}
+
+div.item-contact>ul{
+    margin-top: 1.5em;
+}
+
+div.item-about, div.item-news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 0;
+    color: white;
+}
+
+div.item-contact>h2, div.item-about>h2, div.item-news>h2{
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+div.circle-social-icon{
+    width: 1em;
+    height: 1em;
+    background-color: white;
+    border-radius: 1em;
+}
+
+div.item-contact>ul{
+    list-style-type: none;
+}
+
+div.item-about>ul, div.item-news>ul{
+    margin: 1.3em 1em;
+}
+
+div.item-contact ul li, div.item-about ul li, div.item-news ul li{
+    margin-bottom: 10px;
+    font-size: 10pt;    
+}
+
+ul{
+    padding-left: 0;
+}
+
+footer section.bottom{
+    width: 100%;
+    height: 15%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    margin-top: 1em;
+}
