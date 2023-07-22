@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () =>{
-    document.querySelector(".menu-toggle").addEventListener("click", event =>{
-        document.querySelectorAll(".menu-toggle-item").forEach(item => {
-            item.classList.toggle("clicked");
+    document.querySelectorAll(".control").forEach(button => {
+        button.addEventListener("click", function() {
+            document.querySelector(".active-btn").classList.remove("active-btn");
+            this.classList.add("active-btn");
+            document.querySelector(".active").classList.remove("active");
+            document.getElementById(button.dataset.id).classList.add("active");
         })
-        document.querySelector(".menu-nav").classList.toggle("clicked");
+    });
+    document.querySelector(".theme-btn").addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
     })
 })
