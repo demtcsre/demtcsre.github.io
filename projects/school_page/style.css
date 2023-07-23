@@ -143,61 +143,6 @@ section.content-2>div.kotak{
     box-sizing: border-box;
 }
 
-section.tour{
-    width: 75%;
-    height: 30em;
-    background: url("lab.jpg") center center / cover;
-    opacity: 0.85;
-    margin-top: 5em;
-    display: flex;
-    flex-direction: column;
-}
-
-section.tour>div.box-top{
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section.tour>div.box-top>div.foto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section.tour>div.box-top>h1{
-    display: flex;
-    justify-content: center;
-    font-size: 30pt;
-}
-
-section.tour>div.box-top>p{
-    display: flex;
-    justify-content: center;
-    font-size: 18pt;
-    font-weight: bold;
-    margin-top: 1em;
-}
-
-section.tour>div.box-bottom{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    justify-content: space-around;
-}
-
-section.tour>div.box-bottom>div.btn{
-    height: 2em;
-    font-size: 20pt;
-    font-weight: bold;
-    justify-content: center;
-    box-sizing: border-box;
-    border-style: solid;
-    border-color: black;
-}
-
 section.article{
     width: 80%;
     height: 40em;
@@ -287,9 +232,8 @@ section.article>div.right>div.kotak>div.text>div.satu, section.article>div.right
 section.service{
     width: 100%;
     height: 8em;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(236, 100, 100);
     box-sizing: border-box;
-    border: var(--cream) solid;
     margin-top: 5em;
     display: flex;
     flex-direction: row;

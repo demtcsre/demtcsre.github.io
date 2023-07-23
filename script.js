@@ -9,5 +9,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     });
     document.querySelector(".theme-btn").addEventListener("click", () => {
         document.body.classList.toggle("light-mode");
+        if (document.querySelector(".theme-btn").className == "theme-btn rotated") {
+            document.querySelector(".theme-btn").classList.remove("rotated");
+        }else document.querySelector(".theme-btn").classList.add("rotated");
     })
 })
