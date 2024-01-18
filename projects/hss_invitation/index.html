@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles's HSS Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a0311fd987.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            background-color: #f8f8f8;
+        }
+
+        body {
+            max-width: 31.25em;
+            margin: 0 auto;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        button{
+            font-size: 2em;
+            height: 1.5em;
+            width: 1.5em;
+            border: none;
+            border-radius: 100%;
+            color: #191d2b;
+            background-color: #f8f8f8;
+            position: fixed;
+            margin: 0 auto;
+            top: 2%;
+            right: 1%;
+        }
+
+        p, h1, h2, h3{
+            text-align: center;
+            color: black;
+        }
+
+        h1{
+            font-size: 3em;
+        }
+
+        h2{
+            font-size: 1.5em;
+        }
+
+        h3{
+            font-size: 1.25em;
+        }
+
+        div.container {
+            min-width: 18.75em;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        section#page {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section.intro, section.content, section.outro{
+            gap: 80pt;
+        }
+
+        section.intro{
+            justify-content: space-around;
+            margin-bottom: 0.5em;
+        }
+
+        section.content {
+            padding: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        @media screen and (max-width: 426px) {
+            button{
+                height: 1.5em;
+                width: 1.5em;
+                font-size: 1.5em;
+            }
+
+            h1{
+                font-size: 2em;
+            }
+
+            h2{
+                font-size: 1em;
+            }
+
+            h3{
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="intro" id="page"> 
+            <div class="sub-title">
+                <h2 id="text">You're invited to the celebration of</h2>
+            </div>
+
+            <div class="main-title">
+                <h1 id="text" style="font-family: 'dancing script', cursive;">Charles's Sweet Seventeen</h1>
+            </div>
+
+            <div class="timer">
+                <h2 id="text">Countdown:</h2>
+                <h2 class="countdown" id="text"></h2>
+            </div>
+
+            <div class="rules">
+                <h3 id="text">Dresscode: Casual Formal</h3>
+                <h3 id="text">Wednesday, 30th October 2024</h3>
+                <h3 id="text">Harper Hotel Grand Ballroom, 7 PM</h3>
+            </div>
+        </section>
+        <section class="content" id="page">
+            <div class="main-title">
+                <h1 id="text" style="font-family: 'dancing script', cursive;">What We'll Do?</h1>
+            </div>
+
+            <div class="activities">
+                <h2 id="text">Dinner</h2>
+                <h2 id="text">Karaoke</h2>
+                <h2 id="text">Doorprize</h2>
+                <h2 id="text">Fun Games</h2>
+                <h2 id="text">Titan Pinata</h2>
+            </div>
+        </section>
+        <section class="outro" id="page">
+            <div class="main-title">
+                <h1 id="text" style="font-family: 'dancing script', cursive;">We'll Wait For You</h1>
+                <h2 id="text" style="font-family: 'dancing script', cursive;">See you there</h2>
+            </div>
+        </section>
+    </main>
+    <button class="theme-btn"><i class="fas fa-adjust"></i></button>
+    <script>
+        var countDownDate = new Date("Oct 30, 2024 19:00:00").getTime();
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.querySelector(".countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.querySelector(".countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+        const container = document.body;
+        const modebtn = document.querySelector(".theme-btn");
+        const pages = document.querySelectorAll("#page");
+        const texts = document.querySelectorAll("#text");
+
+        const darkModeCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith('darkMode='));
+        
+        if (darkModeCookie) {
+            const darkModeValue = darkModeCookie.split('=')[1];
+            if (darkModeValue === 'true') {
+                enableDarkMode();
+                container.classList.add("dark-mode");
+            }
+        }
+
+        modebtn.addEventListener("click", () => {
+            container.classList.toggle("dark-mode");
+            if(container.classList.contains("dark-mode")){
+                enableDarkMode();
+            }
+            else{
+                disableDarkMode();
+            };
+         });
+
+        function enableDarkMode() {
+            container.style.backgroundColor = "#191d2b";
+            modebtn.style.backgroundColor = "#191d2b";
+            modebtn.style.color = "#f8f8f8";
+            modebtn.style.transform = "rotate(180deg)";
+            modebtn.style.transition = "all 0.4s ease-in-out";
+            pages.forEach(page => {
+                page.style.backgroundColor = "#191d2b";
+                page.style.transition = "all 0.4s ease-in-out";
+            })
+            texts.forEach(text => {
+                text.style.color = "#f8f8f8";
+            })
+            document.cookie = "darkMode=true; expires=Thu, 01 Jan 2999 00:00:00 UTC; path=/";
+        };
+
+        function disableDarkMode() {
+            container.style.backgroundColor = "#f8f8f8";
+            modebtn.style.backgroundColor = "#f8f8f8";
+            modebtn.style.color = "#191d2b";
+            modebtn.style.transform = "rotate(0deg)";
+            modebtn.style.transition = "all 0.4s ease-in-out";
+            pages.forEach(page => {
+                page.style.backgroundColor = "#f8f8f8";
+                page.style.transition = "all 0.4s ease-in-out";
+            })
+            texts.forEach(text => {
+                text.style.color = "#202020";
+            })
+            document.cookie = "darkMode=false; path=/";
+        };
+    </script>
+</body>
+</html>
